@@ -1,18 +1,18 @@
 class Trainer{
     public void Feedback(){
-        System.out.println("Trainer");
+        System.out.println("Poor");
     }
 }
 class Students extends Trainer{
     public void Feedback(){
         
-        System.out.println(" Excellent");
+        System.out.println("Good ");
     }
 }
 class BatchIot extends Students{
     public void Feedback(){
        
-        System.out.println("SOKKA THANGAM NNNGA....");
+        System.out.println("Excellent Performance");
     }
 }
 

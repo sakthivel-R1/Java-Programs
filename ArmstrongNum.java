@@ -1,48 +1,28 @@
 import java.util.Scanner;
+
 public class ArmstrongNum {
-    public static void main(String[]args){
-       Scanner sc = new Scanner(System.in);
-       System.out.print("Enter the Number To check Armstrong : ");
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-       int num = sc.nextInt();
-       int numDup=num;
-       int sum=0;
-       int count=0;
-       int squre=0;
-       
-       int single =0;
+        
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
 
-       if(num<0){
-           System.out.print("Invalid Input..!");
-           sc.close();
-           return;
-       }
+        int original = num;
+        int sum = 0;
 
-       while(numDup!=0){
-           numDup =numDup/10;
-           count++;
-       }
-       numDup=num;
-       while((numDup!=0)&&(count==2)){
-            single = numDup%10;
-            squre = single*single;
-            sum +=squre;
-            numDup=numDup/10;
-           
+        while (num > 0) {
+            int digit = num % 10;       // extract last digit
+            sum += digit * digit * digit; // cube of digit and add
+            num = num / 10;             // remove last digit
         }
-        numDup=num;
-        while((numDup!=0)&&(count==3)){
-            single = numDup%10;
-            squre = single*single*single;
-            sum +=squre;
-            numDup=numDup/10;
-          
+
+        if (sum == original) {
+            System.out.println(original + " is an Armstrong number.");
+        } else {
+            System.out.println(original + " is NOT an Armstrong number.");
         }
-        if(num==sum){
-            System.out.println("ArmstrongNumber");
-        }else{
-            System.out.println("Not a ArmstrongNumber");
-        }
+
         sc.close();
     }
 }
