@@ -121,7 +121,7 @@ class CLL {
 }
 
 
-public class Main {
+public class CircularLinkedList {
     public static void main(String[] args) {
         CLL list = new CLL();
 

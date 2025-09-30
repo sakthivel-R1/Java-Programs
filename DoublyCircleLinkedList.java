@@ -1,4 +1,4 @@
-public class DCLL {
+ class DCLL {
     Node head;
 
     class Node {
